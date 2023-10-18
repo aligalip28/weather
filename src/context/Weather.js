@@ -19,7 +19,7 @@ function Provider({ children }) {
     if (search === "") return;
     try {
       const data = await fetch(
-        `http://api.weatherapi.com/v1/forecast.json?key=${APP_KEY}&q=${search}&days=3&aqi=no&alerts=no`
+        `https://api.weatherapi.com/v1/forecast.json?key=${APP_KEY}&q=${search}&days=3&aqi=no&alerts=no`
       );
       const result = await data.json();
       setWeather(result.forecast.forecastday, result);
